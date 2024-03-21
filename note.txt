@@ -1,0 +1,84 @@
+1. Tạo tài khoản Red Hat OpenShift:  https://www.redhat.com/wapps/ugc/register.html
+
+AKIAXJM4IAPLXKL2XDGG
+
+0SJ417BTniGabSijfxA0uopXeePzuXJG80ERYkWy
+
+ap-southeast-1
+
+
+
+rosa list clusters
+
+rosa describe cluster -c rosa-lab
+
+rosa logs install -c rosa-lab --watch
+
+
+rosa create cluster --sts
+
+
+rosa create operator-roles --cluster rosa-lab --region ap-southeast-1
+
+rosa create oidc-provider --cluster rosa-lab --region ap-southeast-1
+
+
+rosa create admin -c rosa-lab
+
+
+oc login https://api.rosa-lab.9bux.p1.openshiftapps.com:6443 --username cluster-admin --password 3EuQ6-mPvHq-3Qzk2-w2bYK
+
+
+oc projects
+
+oc process postgresql-ephemeral -n openshift -p DATABASE_SERVICE_NAME=db -p POSTGRESQL_USER=postgres -p POSTGRESQL_PASSWORD=postgres -p POSTGRESQL_DATABASE=postgres | oc apply -f - -n rosa-voting-app
+
+
+oc process redis-ephemeral -n openshift -p REDIS_PASSWORD=redis | oc apply -f - -n rosa-voting-app
+
+
+oc apply -f openshift-specifications/ -n rosa-voting-app
+
+
+oc start-build vote
+
+
+oc login https://api.rosa-lab.1a8v.p1.openshiftapps.com:6443 --username cluster-admin --password U8TLb-hY8Ka-NNEiF-3DNBE
+
+oc process postgresql-ephemeral -n openshift -p DATABASE_SERVICE_NAME=db -p POSTGRESQL_USER=postgres -p POSTGRESQL_PASSWORD=postgres -p POSTGRESQL_DATABASE=postgres | oc apply -f - -n rosa-voting-app
+
+
+oc process redis-ephemeral -n openshift -p REDIS_PASSWORD=redis | oc apply -f - -n rosa-voting-app
+
+
+ROSA-at-501228241879
+
+n2KZyAnkQqAw0balcbfHUmSGxk+l+4mRWcd1TAn2itc=
+
+ oc get route
+
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Hello World
+      - echo Testing codebuild flow
+  post_build:
+    commands:
+      - echo Test successful!
+
+
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Hello World
+      - echo Testing codebuild flow
+  post_build:
+    commands:
+      - echo Test successful!
+      - echo Another pipeline has been triggered
+
+

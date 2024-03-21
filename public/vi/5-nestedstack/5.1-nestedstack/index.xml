@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo nested stack với CDK on CDK nâng cao</title>
+    <link>//localhost:1313/vi/5-nestedstack/5.1-nestedstack/</link>
+    <description>Recent content in Tạo nested stack với CDK on CDK nâng cao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="//localhost:1313/vi/5-nestedstack/5.1-nestedstack/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
