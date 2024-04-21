@@ -18,7 +18,7 @@ We will reuse the workspace that has been created in the CDK Basic part to perfo
 
 Here is the architecture that we would build:
 
-![alt text](image.png)
+![alt text](image-2.png)
 
 #### Content
 

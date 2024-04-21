@@ -18,7 +18,7 @@ Chúng ta sẽ tái sử dụng workspace đã tạo trong phần CDK cơ bản 
 Kiến trúc tổng thể của hệ thống mà chúng ta sẽ xây dựng như sau:
 
 
-![alt text](image-1.png)
+![alt text](image-3.png)
 
 #### Nội dung
 1. [Giới thiệu](1-introduce/)
